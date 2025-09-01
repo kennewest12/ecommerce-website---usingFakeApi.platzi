@@ -233,22 +233,27 @@ async function fetchProduct() {
         : "https://via.placeholder.com/300";
 
     detailContainer.innerHTML = `
-      <div class="product-details">
-        <img src="${imgSrc}" alt="${
-      product.title
-    }" class="product-image-large"/>
-        <div class="product-info">
-          <h1>${product.title}</h1>
-          <p class="category">Category: ${product.category?.name || ""}</p>
-          <p class="price">$${product.price}</p>
-          <p class="description">${product.description}</p>
-          <button onclick="addToCart(${
-            product.id
-          })" class="add-to-cart">Add to Cart</button>
-          <a href="${folderPath}/pages/cart.html" class="view-cart">View Cart</a>
-        </div>
-      </div>
-    `;
+  <div class="product-details">
+    <div class="gallery">
+      <img src="${imgSrc}" alt="${product.title}" class="product-image-large"/>
+    </div>
+    
+    <div class="product-info">
+      <h1>${product.title}</h1>
+      <p class="category">Category: ${product.category?.name || ""}</p>
+      <p class="price">$${product.price}</p>
+      <p class="description">${product.description}</p>
+      
+      <button onclick="addToCart(${product.id})" class="add-to-cart">
+        Add to Cart
+      </button>
+      
+      <a href="${folderPath}/pages/cart.html" class="view-cart">
+        View Cart
+      </a>
+    </div>
+  </div>
+`;
   } catch (err) {
     detailContainer.innerHTML = `<p>Failed to load product.</p>`;
   }
