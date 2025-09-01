@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - KenShop</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <!-- Logo -->
+        <div class="logo">KenShop</div>
+
+        <!-- Navigation -->
+        <ul class="nav-links" id="navMenu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="header-actions">
+          <!-- Search -->
+          <div class="search-bar" id="searchRight">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search products..."
+              title="Type in a name"
+            />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+
+          <!-- Cart -->
+          <a href="cart.html" class="cart-icon active">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+          </a>
+
+          <!-- Mobile Menu Icon -->
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Checkout Section -->
+    <main>
+      <section class="checkout">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+          <h3>Billing Information</h3>
+          <label for="fullname">Full Name</label>
+          <input id="fullname" type="text" placeholder="John Doe" required />
+
+          <label for="address">Address</label>
+          <input id="address" type="text" placeholder="123 Main St" required />
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="phone">Phone Number</label>
+          <input id="phone" type="tel" placeholder="+1 234 567 890" required />
+
+          <h3>Payment Information</h3>
+          <label for="card">Card Number</label>
+          <input
+            id="card"
+            type="text"
+            placeholder="xxxx-xxxx-xxxx-xxxx"
+            required
+          />
+
+          <label for="expiry">Expiry Date</label>
+          <input id="expiry" type="month" required />
+
+          <label for="cvv">CVV</label>
+          <input id="cvv" type="number" placeholder="123" required />
+
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <table>
+              <tbody id="order-summary"></tbody>
+            </table>
+            <p><strong>Total:</strong> $<span id="order-total">0</span></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 KenShop</p>
+      <div class="socials">FB | IG | TW</div>
+      <div class="contact">Contact: info@shop.com</div>
+    </footer>
+
+    <!-- Script -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>

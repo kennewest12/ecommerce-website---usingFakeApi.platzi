@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Me - KenShop</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <!-- Logo -->
+        <div class="logo">KenShop</div>
+
+        <!-- Navigation -->
+        <ul class="nav-links" id="navMenu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="shop.html" class="active">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="header-actions">
+          <!-- Search -->
+          <div class="search-bar" id="searchRight">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search products..."
+              title="Type in a name"
+            />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+
+          <!-- Cart -->
+          <a href="cart.html" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+          </a>
+
+          <!-- Mobile Menu Icon -->
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Shop Section -->
+    <main>
+      <section class="shop">
+        <div class="section-title">
+          <h2>Shop All Products</h2>
+        </div>
+
+        <!-- Category Filter -->
+        <div id="category-grid" class="category-grid"></div>
+
+        <!-- Selected Category -->
+        <h3 id="selected-category-title"></h3>
+        <div class="product-grid" id="category-products"></div>
+
+        <!-- All Products Grid -->
+        <div class="product-grid" id="product-list">Loading products...</div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 KenShop</p>
+      <div class="socials">FB | IG | TW</div>
+      <div class="contact">Contact: info@shop.com</div>
+    </footer>
+
+    <!-- Script -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>

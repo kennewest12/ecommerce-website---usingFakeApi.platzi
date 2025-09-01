@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - KenShop</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="../js/script.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <!-- Logo -->
+        <div class="logo">KenShop</div>
+
+        <!-- Navigation -->
+        <ul class="nav-links" id="navMenu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="header-actions">
+          <!-- Search -->
+          <div class="search-bar" id="searchRight">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search products..."
+              title="Type in a name"
+            />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+
+          <!-- Cart -->
+          <a href="cart.html" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+          </a>
+
+          <!-- Mobile Menu Icon -->
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Contact Section -->
+      <section class="contact">
+        <div class="contact-container">
+          <h1>Contact Us</h1>
+          <p>
+            We’d love to hear from you. Reach us through the form or our details
+            below.
+          </p>
+
+          <div class="contact-grid">
+            <!-- Contact Form -->
+            <form class="contact-form">
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <p>
+                <i class="fa fa-map-marker-alt"></i> 123 Fashion Street, Lagos
+              </p>
+              <p><i class="fa fa-phone"></i> +234 800 123 4567</p>
+              <p><i class="fa fa-envelope"></i> support@kenshop.com</p>
+              <p><i class="fa fa-clock"></i> Mon - Sat: 9am - 8pm</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 KenShop</p>
+    </footer>
+  </body>
+</html>

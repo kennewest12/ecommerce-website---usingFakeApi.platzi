@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Landing Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <!-- Logo -->
+        <div class="logo">KenShop</div>
+
+        <!-- Navigation -->
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="./pages/shop.html">Shop</a></li>
+          <li><a href="./pages/about.html">About</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="header-actions">
+          <!-- Search -->
+          <div class="search-bar" id="searchRight">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search products..."
+              title="Type in a name"
+            />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+
+          <!-- Cart -->
+          <a href="./pages/cart.html" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+          </a>
+
+          <!-- Mobile Menu Icon -->
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Welcome to Our Store</h1>
+          <h3>Find your next favorite thing.</h3>
+          <p>Beautiful, responsive, and fast</p>
+          <div class="cta">
+            <a href="pages/shop.html" class="btn btn-primary">Start Shopping</a>
+            <a href="pages/about.html" class="btn btn-ghost">Learn More</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600&auto=format&fit=crop"
+            alt="Hero banner"
+          />
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="product-grid" id="product-list">Loading...</div>
+      </section>
+
+      <!-- Categories -->
+      <section class="categories">
+        <h2>Shop by Category</h2>
+        <div id="category-grid" class="category-grid"></div>
+        <h3 id="selected-category-title"></h3>
+        <div id="category-products" class="product-grid"></div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 MyShop</p>
+      <div class="socials">FB | IG | TW</div>
+      <div class="contact">Contact: info@shop.com</div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
