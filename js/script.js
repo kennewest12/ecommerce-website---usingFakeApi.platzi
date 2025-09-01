@@ -233,29 +233,58 @@ async function fetchProduct() {
         : "https://via.placeholder.com/300";
 
     detailContainer.innerHTML = `
-  <div class="product-details">
-    <div class="gallery">
-      <img src="${imgSrc}" alt="${product.title}" class="product-image-large"/>
-    </div>
-    
-    <div class="product-info">
-      <h1>${product.title}</h1>
-      <p class="category">Category: ${product.category?.name || ""}</p>
-      <p class="price">$${product.price}</p>
-      <p class="description">${product.description}</p>
-      
-      <button onclick="addToCart(${product.id})" class="add-to-cart">
-        Add to Cart
-      </button>
-      
-      <a href="${folderPath}/pages/cart.html" class="view-cart">
-        View Cart
-      </a>
-    </div>
-  </div>
-`;
+      <div class="product-details">
+        <div class="gallery">
+          <div class="main-image">
+            <img src="${imgSrc}" alt="${
+      product.title
+    }" class="product-image-large"/>
+          </div>
+          <div class="thumbnails">
+            ${product.images
+              .map(
+                (img) =>
+                  `<img src="${img}" alt="${product.title}" class="thumb-image"/>`
+              )
+              .join("")}
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h1>${product.title}</h1>
+          <p class="category">Category: ${product.category?.name || ""}</p>
+          <p class="price">$${product.price}</p>
+          <p class="description">${product.description}</p>
+
+          <div class="button-group">
+            <button onclick="addToCart(${product.id})" class="add-to-cart">
+              Add to Cart
+            </button>
+            <button onclick="location.href='${folderPath}/pages/cart.html'" class="view-cart">
+              View Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // ====== Add thumbnail click functionality HERE ======
+    const mainImage = document.querySelector(".gallery .main-image img");
+    const thumbnails = document.querySelectorAll(
+      ".gallery .thumbnails .thumb-image"
+    );
+
+    thumbnails.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        mainImage.src = thumb.src;
+        // highlight active thumbnail
+        thumbnails.forEach((t) => (t.style.border = "2px solid transparent"));
+        thumb.style.border = "2px solid var(--btn-primary, #813434)";
+      });
+    });
   } catch (err) {
     detailContainer.innerHTML = `<p>Failed to load product.</p>`;
+    console.error(err);
   }
 }
 
